@@ -7,6 +7,9 @@ mensaje.innerHTML = "Good luck!";
 let winner = document.getElementById("winner");
 let hideicons = document.getElementById("imgsH");
 let playerPoints = 0, computerPoints = 0;
+let computerchoice = document.getElementById("ccdefault");
+let playerchoice = document.getElementById("hcdefault");
+let body = document.getElementsByTagName("body");
 
 const rock = document.getElementById("r");
 const paper = document.getElementById("p");
@@ -16,18 +19,14 @@ let op = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
     aleatorio = Math.floor(Math.random() * op.length);
-    let computerchoice;
     switch (aleatorio) {
         case 0:
-            computerchoice = document.getElementById("ccdefault");
             computerchoice.src = "imgs/rock.png";
             return op[0];
         case 1:
-            computerchoice = document.getElementById("ccdefault");
             computerchoice.src = "imgs/paper.png";
             return op[1];
         case 2:
-            computerchoice = document.getElementById("ccdefault");
             computerchoice.src = "imgs/scissors.png";
             return op[2];
     }
@@ -57,17 +56,14 @@ reset.addEventListener("click", function (e) {
 })
 
 function ChangeToRock() {
-    const playerchoice = document.getElementById("hcdefault");
     playerchoice.src = "imgs/rock.png";
 }
 
 function ChangeToPaper() {
-    const playerchoice = document.getElementById("hcdefault");
     playerchoice.src = "imgs/paper.png";
 }
 
 function ChangeToScissors() {
-    const playerchoice = document.getElementById("hcdefault");
     playerchoice.src = "imgs/scissors.png";
 }
 
@@ -112,10 +108,10 @@ function game() {
     if (computerPoints == 5 || playerPoints == 5) {
         if (playerPoints == 5) {
             hideicons.style.display = "none";
-            winner.innerHTML = 'Congratulations! You are the final winner.';
+            winner.innerHTML = 'Yay! You win c:';
         } else if (computerPoints == 5) {
             hideicons.style.display = "none";
-            winner.innerHTML = 'Sorry, you lost :c! Computer is the final winner.';
+            winner.innerHTML = 'Sorry, you lost :c!';
         }
     }
 }
@@ -129,6 +125,8 @@ function restartGame() {
     winner.innerHTML = "Winner";
     hideicons.style.display = "flex";
     hideicons.style.justifyContent = "center";
+    playerchoice.src = "imgs/índice2.png";
+    computerchoice.src="imgs/índice2.png";
 }
 
 requestName();
