@@ -99,7 +99,7 @@ function game() {
         mensaje.innerHTML = 'You Win! ' + playerSelection.toUpperCase() + ' beats ' + computerSelection.toUpperCase() + '. Computer Lose';
     } else if (result === 'ComputerWin') {
         computerPoints++;
-        mensaje.innerHTML = 'Computer Win! ' + computerSelection.toUpperCase() + ' beats ' + playerSelection.toUpperCase() + '. You Lose';
+        mensaje.innerHTML = 'Computer Wins! ' + computerSelection.toUpperCase() + ' beats ' + playerSelection.toUpperCase() + '. You Lose';
 
     }
     playerscore.innerHTML = playerPoints;
