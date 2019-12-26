@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Piedra, Papel o Tijeras: EL JUEGO</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="title">
+            Rock, Paper, Scissors
+        </div>
+        <div id="players">
+            <div id="humano">Player name</div>
+            <div>
+                <p>VS</p>
+            </div>
+            <div id="pc">Machine</div>
+        </div>
+        <div id="choices">
+            <div id="hc">
+                <img id="hcdefault" src="imgs/índice2.png" alt="default">
+            </div>
+            <div id="cc">
+                <img id="ccdefault" src="imgs/índice2.png" alt="default">
+            </div>
+        </div>
+        <div class="points">
+            <div id="ps"></div>
+            <div id="cs"></div>
+        </div>
+        <div id="msg">
+            <span>Good Luck!</span>
+        </div>
+        <div id="imgsH">
+            <div id="r" class="imgsH">
+                <img id="r1" src="imgs/rock.png" alt="paper" class="rps">
+            </div>
+            <div id="p" class="imgsH">
+                <img id="p2" src="imgs/paper.png" alt="rock" class="rps">
+            </div>
+            <div id="s" class="imgsH">
+                <img id="s2" src="imgs/scissors.png" alt="scissors" class="rps">
+            </div>
+        </div>
+        <div id="winner">Winner</div>
+        <div id="restart">Restart</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
