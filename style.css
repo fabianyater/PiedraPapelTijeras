@@ -58,7 +58,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     padding-right: 0;
-    margin: -20px 0 0 0;
+    margin: -70px 0 0 0;
     position: relative;
 }
 
@@ -79,7 +79,7 @@ p {
 #msg {
     text-align: center;
     /*! height: 64px; */
-    margin: 20px 2em;
+    margin: 20px 0em;
     /*! background-color: rgba(141, 26, 255, 0.75); */
     border-radius: 15px;
     border: black solid;
@@ -160,7 +160,7 @@ p {
 #winner {
     margin: 10px auto;
     border: black solid;
-    width: 88%;
+    width: 100%;
     text-align: center;
     line-height: 40px;
     border-radius: 15px;
