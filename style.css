@@ -88,11 +88,6 @@ p {
     font-size: 2em;
 }
 
-#msg span {
-    line-height: 40px;
-    font-size: 40px;
-}
-
 #imgsH {
     display: flex;
     justify-content: center;

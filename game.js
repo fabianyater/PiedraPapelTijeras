@@ -3,6 +3,7 @@ playerscore.innerHTML = "0";
 let computerscore = document.getElementById("cs");
 computerscore.innerHTML = "0";
 let mensaje = document.getElementById("msg");
+mensaje.innerHTML = "Good luck!";
 let winner = document.getElementById("winner");
 let hideicons = document.getElementById("imgsH");
 let playerPoints = 0, computerPoints = 0;
