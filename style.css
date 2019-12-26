@@ -42,7 +42,7 @@ p {
 }
 
 #humano, #pc {
-    width: 197px;
+    width: 230px;
     text-align: center;
 }
 
@@ -58,7 +58,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     padding-right: 0;
-    margin: -70px 0 0 0;
+    margin: -30px 0 0 0;
     position: relative;
 }
 
@@ -84,7 +84,7 @@ p {
     border-radius: 15px;
     border: black solid;
     box-shadow: 10px 5px;
-    margin-bottom: 2em;
+    margin-bottom: 15px;
     font-size: 2em;
 }
 
