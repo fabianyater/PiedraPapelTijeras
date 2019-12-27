@@ -9,7 +9,6 @@ let hideicons = document.getElementById("imgsH");
 let playerPoints = 0, computerPoints = 0;
 let computerchoice = document.getElementById("ccdefault");
 let playerchoice = document.getElementById("hcdefault");
-let body = document.getElementsByTagName("body");
 
 const rock = document.getElementById("r");
 const paper = document.getElementById("p");
@@ -34,20 +33,20 @@ function computerPlay() {
 
 rock.addEventListener("click", function (e) {
     playerSelection="rock";
-    ChangeToRock();
+    playerchoice.src = "imgs/rock.png";
     game();
     
 });
 
 paper.addEventListener("click", function (e) {
     playerSelection="paper";
-    ChangeToPaper();
+    playerchoice.src = "imgs/paper.png";
     game();
 });
 
 scissors.addEventListener("click", function (e) {
     playerSelection="scissors";
-    ChangeToScissors();
+    playerchoice.src = "imgs/scissors.png";
     game();
 });
 
@@ -55,31 +54,18 @@ reset.addEventListener("click", function (e) {
     restartGame();
 })
 
-function ChangeToRock() {
-    playerchoice.src = "imgs/rock.png";
-}
-
-function ChangeToPaper() {
-    playerchoice.src = "imgs/paper.png";
-}
-
-function ChangeToScissors() {
-    playerchoice.src = "imgs/scissors.png";
-}
-
 function requestName(){
-    let txt = prompt("Player Name:","Player 1");
-    if(txt==null || txt==" "){
+    let name = prompt("Player Name:","Player 1");
+    if(name==null || name==" "){
         document.getElementById("humano").innerHTML ="Player1";
     }else {
-        document.getElementById("humano").innerHTML =txt;
+        document.getElementById("humano").innerHTML =name;
     }
 }
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         mensaje.innerHTML = "It's a tie!";
-        console.log('It\'s a tie');
     } else if ((playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
@@ -96,16 +82,15 @@ function game() {
 
     if (result === 'PlayerWin') {
         playerPoints++;
-        mensaje.innerHTML = 'You Win! ' + playerSelection.toUpperCase() + ' beats ' + computerSelection.toUpperCase() + '. Machine Loses';
+        mensaje.innerHTML = 'You Win! ' + playerSelection.toUpperCase() + ' beats ' + computerSelection.toUpperCase() + '. Computer Lose';
     } else if (result === 'ComputerWin') {
         computerPoints++;
-        mensaje.innerHTML = 'Machine Wins! ' + computerSelection.toUpperCase() + ' beats ' + playerSelection.toUpperCase() + '. You Lose';
+        mensaje.innerHTML = 'Computer Wins! ' + computerSelection.toUpperCase() + ' beats ' + playerSelection.toUpperCase() + '. You Lose';
 
     }
     playerscore.innerHTML = playerPoints;
     computerscore.innerHTML = computerPoints;
 
-    if (computerPoints == 5 || playerPoints == 5) {
         if (playerPoints == 5) {
             hideicons.style.display = "none";
             winner.innerHTML = 'Yay! You win c:';
@@ -113,7 +98,6 @@ function game() {
             hideicons.style.display = "none";
             winner.innerHTML = 'Sorry, you lost :c!';
         }
-    }
 }
 
 function restartGame() {
